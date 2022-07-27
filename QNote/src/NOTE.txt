@@ -1,0 +1,50 @@
+sorrow is hushed into peace in my heart
+
+like the evening among the silent trees.
+
+忧思在我的心里平静下去，
+
+正如暮色降临在寂静的山林中。
+
+我的院子里有四万万朵玫瑰花，每天清晨我捧一本书坐在院子里，路过的路人都会称赞我的玫瑰，也有想要折去一两朵的，我通通不理不睬。直到有一天你来，笑眼眯成月牙，问我，“看的什么书啊”，我就知道，这四万万朵玫瑰花统统是你的。
+
+
+
+
+
+
+
+sudo cp /usr/local/VSCode-linux-x64/resources/app/resources/linux/code.png /usr/share/icons/
+
+在/usr/share/applications/目录，创建启动器：
+
+sudo vim /usr/share/applications/VSCode.desktop
+
+输入以下内容并保存退出：
+
+[Desktop Entry]
+Name=Visual Studio Code
+Comment=Multi-platform code editor for Linux
+Exec=/usr/local/VSCode-linux-x64/code
+Icon=/usr/share/icons/code.png
+Type=Application
+StartupNotify=true
+Categories=TextEditor;Development;Utility;
+MimeType=text/plain;
+*tips：esc + wq! //vim保存退出操作 *
+
+cp /usr/share/applications/VSCode.desktop ~/桌面/
+
+LOAD R1, 1000
+LOAD R2, 2000
+ADD R3, R1, R2
+STORE R3, 3000
+
+addi $11, $0, 100;  $11 is the loop counter
+L1:
+lw $8, 0($10); get the current element of the array
+sra $9, $8, 3; divide it by 8
+sw $9,0(S10); store it.
+addiu $10, $10, 4; find the address of next element
+addi $11, $11, -1; decrement looo counter
+bne $11, $0, L1
